@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshay Gaitonde</title>
-    <link rel="stylesheet" href="https://latex.vercel.app/style.css">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://latex.vercel.app/style.css"> -->
+    <link rel="stylesheet" href="./css/latex.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -15,31 +16,18 @@
                 <a href="#">Home</a>
                 <a href="#about">About</a>
                 <a href="#now">Now</a>
-                <a href="./blog/blog.html" >Blog</a>
-                <script>
-                    window.location.href = openSite();
-                </script>
+                <a href="./blog.html" >Blog</a>
                 <a href="#contact">Contact</a>
-                <button id="dark-mode-toggle">Toggle light/dark</button>
-                <!-- <a href="javascript:void(0);" class="icon" onclick="mobileBars()">
-                    <i class="fa fa-bars"></i>
-                </a> -->
-                <script>
-                    function mobileBars() {
+            </div>
+            <script>
+                function mobileBars() {
                         var x = document.getElementById("myTopnav");
                         if (x.className === "topnav") {
                             x.className += " responsive";
                         } else {
                             x.className = "topnav";
                         }
-                    } 
-                </script>
-            </div>
-            <script>
-                document.querySelector("#dark-mode-toggle")
-                    .addEventListener('click', () => {
-                        document.body.classList.toggle("latex-dark");
-                    });
+                    }
             </script>
         </nav>
         <section class="hero">
@@ -51,10 +39,75 @@
         </section>
     </header>
 
+    <button onclick="topFunction()" id="topScrollBtn" title="Go to top">Top</button> 
+    <script>
+        let scrollBtn = document.getElementById("topScrollBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        } 
+    </script>
+
+    <button onclick="toggleDark()" id="darkModeToggleBtn" title="Toggle light/dark mode">
+        <!-- <svg class="icon" viewBox="0 0 24 24" width="24" height="24">
+            <path d="./icons/moon-solid.svg"></path>
+        </svg> -->
+        <!-- <img src="./icons/moon-solid.svg" class="icon" alt="Icon"> -->
+        ◐
+    </button>
+    <script>
+        function toggleDark() {
+            document.body.classList.toggle("latex-dark");
+            let darkModeBtn = document.getElementById("darkModeToggleBtn");
+            if (window.getComputedStyle(document.getElementsByName('body')).backgroundColor === '#292929') {
+                // dark mode is enabled
+                darkModeBtn.textContent = "◑";
+                darkModeBtn.style.backgroundColor = '#292929';
+                darkModeBtn.style.color = 'white';            
+            } else {
+                // light mode
+                darkModeBtn.textContent = "◐";
+                darkModeBtn.style.backgroundColor = 'white';
+                darkModeBtn.style.color = '#292929'; 
+
+            }
+            // if (darkModeBtn.classList.contains('light-mode-btn')) {
+            //     button.classList.remove('light-mode-btn');
+            //     button.classList.add('dark-mode-btn');
+            //     darkModeBtn.textContent = "◑";
+            // } else {
+            //     button.classList.remove('dark-mode-btn');
+            //     button.classList.add('light-mode-btn');
+            //     darkModeBtn.textContent = "◐";
+            // }
+            // if (darkModeBtn.textContent.includes("◐")) {
+            //     darkModeBtn.textContent = "◑";
+            //     // darkModeBtn.style.backgroundColor = '#292929';
+            //     // darkModeBtn.style.color = 'white';
+            // } else {
+            //     darkModeBtn.textContent = "◐";
+            //     // darkModeBtn.style.backgroundColor = 'white';
+            //     // darkModeBtn.style.color = '#292929';
+            // }
+        }
+    </script>
+
     <section id="about" class="about">
         <div class="container">
             <h2>About Me</h2>
-            <p>[Write a brief description about yourself here. Highlight your skills, experiences, and what you’re passionate about.]</p>
+            <p>[Write a brief description about yourself here. Highlight your skills, experiences, and what you're passionate about.]</p>
         </div>
     </section>
 
