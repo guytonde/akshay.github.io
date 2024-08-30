@@ -5,23 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akshay Gaitonde</title>
     <link rel="stylesheet" href="https://latex.vercel.app/style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav>
-            <div class="container">
-                <a href="#" class="logo">MyName</a>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <div class="topnav" id="myTopnav">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#now">Now</a>
+                <a href="./blog/blog.html" >Blog</a>
+                <script>
+                    window.location.href = openSite();
+                </script>
+                <a href="#contact">Contact</a>
+                <button id="dark-mode-toggle">Toggle light/dark</button>
+                <!-- <a href="javascript:void(0);" class="icon" onclick="mobileBars()">
+                    <i class="fa fa-bars"></i>
+                </a> -->
+                <script>
+                    function mobileBars() {
+                        var x = document.getElementById("myTopnav");
+                        if (x.className === "topnav") {
+                            x.className += " responsive";
+                        } else {
+                            x.className = "topnav";
+                        }
+                    } 
+                </script>
             </div>
+            <script>
+                document.querySelector("#dark-mode-toggle")
+                    .addEventListener('click', () => {
+                        document.body.classList.toggle("latex-dark");
+                    });
+            </script>
         </nav>
         <section class="hero">
             <div class="hero-content">
-                <h1>Hello, I'm [Your Name]</h1>
-                <p>Welcome to my personal website. I am a [Your Profession] specializing in [Your Specialty].</p>
+                <h1>Hello, I'm Akshay</h1>
+                <p>I'm a Computer Science and Mathematics major at the Univerity of Texas at Austin with interests in security, AI/ML, and software engineering.</p>
                 <a href="#contact" class="btn">Get in Touch</a>
             </div>
         </section>
@@ -52,10 +76,12 @@
             </div>
         </div>
     </section>
+    
 
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Me</h2>
+
             <form action="send_message.php" method="post">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -73,7 +99,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 MyName. All rights reserved.</p>
+            <p>&copy; 2024 Akshay Gaitonde. All rights reserved.</p>
         </div>
     </footer>
 </body>
