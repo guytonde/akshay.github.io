@@ -21,13 +21,13 @@
             </div>
             <script>
                 function mobileBars() {
-                        var x = document.getElementById("myTopnav");
-                        if (x.className === "topnav") {
-                            x.className += " responsive";
-                        } else {
-                            x.className = "topnav";
-                        }
+                    var x = document.getElementById("myTopnav");
+                    if (x.className === "topnav") {
+                        x.className += " responsive";
+                    } else {
+                        x.className = "topnav";
                     }
+                }
             </script>
         </nav>
         <section class="hero">
@@ -70,19 +70,8 @@
     <script>
         function toggleDark() {
             document.body.classList.toggle("latex-dark");
-            let darkModeBtn = document.getElementById("darkModeToggleBtn");
-            if (window.getComputedStyle(document.getElementsByName('body')).backgroundColor === '#292929') {
-                // dark mode is enabled
-                darkModeBtn.textContent = "◑";
-                darkModeBtn.style.backgroundColor = '#292929';
-                darkModeBtn.style.color = 'white';            
-            } else {
-                // light mode
-                darkModeBtn.textContent = "◐";
-                darkModeBtn.style.backgroundColor = 'white';
-                darkModeBtn.style.color = '#292929'; 
-
-            }
+            updateModeSwitchBtn();
+            
             // if (darkModeBtn.classList.contains('light-mode-btn')) {
             //     button.classList.remove('light-mode-btn');
             //     button.classList.add('dark-mode-btn');
@@ -101,6 +90,22 @@
             //     // darkModeBtn.style.backgroundColor = 'white';
             //     // darkModeBtn.style.color = '#292929';
             // }
+        }
+        function updateModeSwitchBtn() {
+            let darkModeBtn = document.getElementById("darkModeToggleBtn");
+            if (window.getComputedStyle(document.getElementsByName('body')).backgroundColor === '#292929') {
+                console.log("dark found");
+                // dark mode is enabled
+                darkModeBtn.textContent = "◑";
+                darkModeBtn.style.backgroundColor = '#292929';
+                darkModeBtn.style.color = 'white';            
+            } else {
+                // light mode
+                darkModeBtn.textContent = "◐";
+                darkModeBtn.style.backgroundColor = 'white';
+                darkModeBtn.style.color = '#292929'; 
+
+            }
         }
     </script>
 
