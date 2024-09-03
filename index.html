@@ -3,162 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akshay Gaitonde</title>
-    <!-- <link rel="stylesheet" href="https://latex.vercel.app/style.css"> -->
-    <link rel="stylesheet" href="./css/latex.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <title>Home - Akshay Gaitonde</title>
+    <link rel="stylesheet" href="css/latex.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="topnav" id="myTopnav">
-                <a href="#">Home</a>
-                <a href="#about">About</a>
-                <a href="#now">Now</a>
-                <a href="./blog.html" >Blog</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <script>
-                function mobileBars() {
-                    var x = document.getElementById("myTopnav");
-                    if (x.className === "topnav") {
-                        x.className += " responsive";
-                    } else {
-                        x.className = "topnav";
-                    }
-                }
-            </script>
-        </nav>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Hello, I'm Akshay</h1>
-                <p>I'm a Computer Science and Mathematics major at the Univerity of Texas at Austin with interests in security, AI/ML, and software engineering.</p>
-                <a href="#contact" class="btn">Get in Touch</a>
-            </div>
-        </section>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="./index.html#Contact">About</a>
+            <a href="happening-now.html">Happening Now</a>
+            <a href="blog.html">Blog</a>
+            <a href="experience.html">Experience</a>
+            <a href="./index.html#Contact">Contact</a>
+        </div>
+        <button class="dark-mode-toggle" id="dark-mode-toggle">Switch to Dark Mode</button>
     </header>
-
-    <button onclick="topFunction()" id="topScrollBtn" title="Go to top">Top</button> 
-    <script>
-        let scrollBtn = document.getElementById("topScrollBtn");
-
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollBtn.style.display = "block";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        }
-
-        function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        } 
-    </script>
-
-    <button onclick="toggleDark()" id="darkModeToggleBtn" title="Toggle light/dark mode">
-        <!-- <svg class="icon" viewBox="0 0 24 24" width="24" height="24">
-            <path d="./icons/moon-solid.svg"></path>
-        </svg> -->
-        <!-- <img src="./icons/moon-solid.svg" class="icon" alt="Icon"> -->
-        ◐
-    </button>
-    <script>
-        function toggleDark() {
-            document.body.classList.toggle("latex-dark");
-            updateModeSwitchBtn();
-            
-            // if (darkModeBtn.classList.contains('light-mode-btn')) {
-            //     button.classList.remove('light-mode-btn');
-            //     button.classList.add('dark-mode-btn');
-            //     darkModeBtn.textContent = "◑";
-            // } else {
-            //     button.classList.remove('dark-mode-btn');
-            //     button.classList.add('light-mode-btn');
-            //     darkModeBtn.textContent = "◐";
-            // }
-            // if (darkModeBtn.textContent.includes("◐")) {
-            //     darkModeBtn.textContent = "◑";
-            //     // darkModeBtn.style.backgroundColor = '#292929';
-            //     // darkModeBtn.style.color = 'white';
-            // } else {
-            //     darkModeBtn.textContent = "◐";
-            //     // darkModeBtn.style.backgroundColor = 'white';
-            //     // darkModeBtn.style.color = '#292929';
-            // }
-        }
-        function updateModeSwitchBtn() {
-            let darkModeBtn = document.getElementById("darkModeToggleBtn");
-            if (window.getComputedStyle(document.getElementsByName('body')).backgroundColor === '#292929') {
-                console.log("dark found");
-                // dark mode is enabled
-                darkModeBtn.textContent = "◑";
-                darkModeBtn.style.backgroundColor = '#292929';
-                darkModeBtn.style.color = 'white';            
-            } else {
-                // light mode
-                darkModeBtn.textContent = "◐";
-                darkModeBtn.style.backgroundColor = 'white';
-                darkModeBtn.style.color = '#292929'; 
-
-            }
-        }
-    </script>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>[Write a brief description about yourself here. Highlight your skills, experiences, and what you're passionate about.]</p>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-items">
-                <!-- Add your portfolio items here -->
-                <div class="portfolio-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <p>Brief description of Project 1.</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Project 2</h3>
-                    <p>Brief description of Project 2.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-
-            <form action="send_message.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </section>
-
+    <main>
+        
+        <h1>Akshay Gaitonde</h1>
+        <blockquote></blockquote>
+        <h2>About</h2>
+        <p>Hello! I'm a student at the <b>University of Texas at Austin</b> pursuing a double major in Computer Science and Mathematics. 
+            I'm particularly interested in machine learning, system security, and networking. See <a href="experience.html">experience</a> for more.
+        </p>
+        <p>Outside of work and school, I enjoy playing saxophone, trying new foods, and spending time with family. To keep my saxophone skills, I participate 
+            in the University Saxophone Ensemble. Currently, I own a Yanagisawa TW02 and play on the included mouthpiece and blue box Vandoren 3.5 reeds.
+        </p>
+        <p>If you want to know what I'm doing currently, see <a href="happening-now.html">happening now</a> for a quick view into my current routine or check 
+            out my <a href="blog.html">blog</a> for details on some of my projects.
+        </p>
+        <h2>Contact</h2>
+        <p><a href="mailto:akshay.g.application@gmail.com">Email</a> is usually the best way to reach me, but I also have a <a href="https://www.linkedin.com/in/akshay-g-2a6108213/">LinkedIn</a>.
+        </p>
+    </main>
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Akshay Gaitonde. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Akshay Gaitonde</p>
     </footer>
+    <script src="./scripts/darkmode.js"></script>
 </body>
 </html>
