@@ -3,29 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experience - My Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Experience - Akshay Gaitonde</title>
+    <link rel="stylesheet" href="css/latex.css">
 </head>
+
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="happening-now.html">Happening Now</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="experience.html">Experience</a></li>
-            </ul>
-        </nav>
-        <button id="dark-mode-toggle">Switch to Dark Mode</button>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="./index.html#About">About</a>
+            <a href="happening-now.html">Happening Now</a>
+            <a href="blog.html">Blog</a>
+            <a href="experience.html">Experience</a>
+            <a href="./index.html#Contact">Contact</a>
+        </div>
+        <button class="dark-mode-toggle" id="dark-mode-toggle">Switch to Dark Mode</button>
     </header>
     <main>
+        
         <h1>Experience</h1>
-        <p>Details about my academic and work experience.</p>
+        <h2>Education</h2>
+        <h4>The University of Texas at Austin</h4>
+        <p><em>Bachelor of Science in Computer Science, Mathematics</em>    [2023 - 2026]
+            <br>Minor in Entrepreneurship, Applied Statistical Modeling Certificate
+            <br>Relevant Coursework: 
+                <ul>
+                    <li>Operating Systems</li>
+                    <li>Computer Architecture</li>
+                    <li>Data Structures</li>
+                    <li>Discrete Mathematics</li>
+                    <li>Probability</li>
+                    <li>Applied Statistics</li>
+                    <li>Linear Algebra</li>
+                </ul>
+        </p>
+        <h2>Work Experience</h2>
+        <div class="h-scroll-panel scroll-wrapper" > 
+            <table id="work_xp_table">
+                <thead>
+                    <tr>
+                        <th>Trend Micro Inc.</th>
+                        <th>Liberal Arts IT Services</th>
+                        <th>CompuPlus</th>
+                        <th>City of Austin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Research and Development Intern, Core Services</td>
+                        <td>Desktop Support Student Technology Assistant II</td>
+                        <td>System Repair Specialist</td>
+                        <td>Technician Intern</td>
+                    </tr>
+                    <tr>
+                        <td>[Jun 2024 - Aug 2024]</td>
+                        <td>[Jan 2024 - Present]</td>
+                        <td>[Aug 2022 - Present]</td>
+                        <td>[Jun 2022 - Aug 2022]</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>Developed modern REST APIs in Java for clients to retrieve tagged elements across multiple data stores (Vertica, MariaDB, internal binary encoding), significantly increasing client productivity in managing a product fleet.</li>
+                                <li>Refined production code to address prior issues in input sanitation and restructured the package handling system.</li>
+                                <li>Replaced legacy SOAP API functionality with modern REST API architecture.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4>Trend Micro Inc. </h4>
+        <h5>Research and Development Intern, Core Services [Jun 2024 - Aug 2024]</h5>
+        <p>
+            <ul>
+                <li>Developed modern REST APIs in Java for clients to retrieve tagged elements across multiple data stores (Vertica, MariaDB, internal binary encoding), 
+                    significantly increasing client productivity in managing a product fleet.</li>
+                <li>Refined production code to address prior issues in input sanitation and restructured the package handling system.</li>
+                <li>Replaced legacy SOAP API functionality with modern REST API architecture.</li>
+            </ul>
+        </p>
+        <h4>Liberal Arts IT Services</h4>
+        <h5>Desktop Support Student Technology Assistant II [Jan 2024 - Present]</h5>
+        <p>
+            <ul>
+                <li>Diagnose software and minor hardware issues of client systems.</li>
+                <li>Utilize Jamf, ServiceNow, and BeyondTrust for remote system endpoint management, deployment, and ticketing.</li>
+            </ul>
+        </p>
+        <h4>CompuPlus </h4>
+        <h5>System Repair Specialist [Jan 2024 - Present]</h5>
+        <p>
+            <ul>
+                <li>Diagnose, reverse engineer, and assemble client systems collaborating in a team of 1-2 other specialists.</li>
+                <li>Practice and mentor others in hardware and software repair for Windows, MacOS, Linux, iPhone, and iPad.</li>
+                <li>Operate the point of sale system and manage customer relations at the front desk.</li>
+            </ul>
+        </p>
+        <h4>City of Austin [Jun 2022 - Aug 2022]</h4>
+        <h5>Technician Intern</h5>
+        <p>
+            <ul>
+                <li>Trained in basic computer repair, enterprise IT administration softwares (Active Directory, Group Policy, print server), 
+                    and ServiceNow.</li>
+                <li>Resolved 15+ inconsistencies in workstation OS images.</li>
+            </ul>
+        </p>
+
+        <h2>Extracurricular Work</h2>
+        <h4>Longhorn Racing </h4>
+        <h5>Solar Car Controls Engineer [Aug 2023 - Present]</h5>
+        <p>
+            <ul>
+                <li>Advancing functions related to driver control and awareness with C, FreeRTOS, and custom PCBs.</li>
+                <li>Collaborating in designing next generation hardware and software architecture.</li>
+                <li>Utilize GitHub for version control, issue tracking, and project modularity.</li>         
+            </ul>
+        </p>
+        <h4>Applied Cybersecurity Community Clinic</h4>
+        <h5>Clinic Student [Aug 2024 - Present]</h5>
+        <p>
+            <ul>
+                <li>Acquiring key cybersecurity defense skills such as vulnerability assessment, network security, access controls, and 
+                    penetration testing, applicable to real-world business settings.</li>
+                <li>Pursuing the CompTIA Security+ Credential and the Google Cybersecurity Professional Certificate.</li>
+            </ul>
+        </p>
+        <h4>Autonomous Robots Stream, Freshman Research Initiative</h4>
+        <h5>Undergraduate Research Assistant [Jan 2024 - Present]</h5>
+        <p>
+            <ul>
+                <li>Conducting research in robotics and application of artificial intelligence, specifically in human-robot interaction.</li>
+                <li>Presented a novel integration of an LLM and a Pinecone database of semantically mapped data of diseases and symptoms 
+                    in the application of an interactive nurse robot.</li>
+            </ul>
+        </p>
+
     </main>
     <footer>
-        <p>&copy; 2024 My Personal Website</p>
+        <p>&copy; 2024 Akshay Gaitonde</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="./scripts/darkmode.js"></script>
 </body>
 </html>

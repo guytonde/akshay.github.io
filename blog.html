@@ -3,29 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - My Personal Website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Blog - Akshay Gaitonde</title>
+    <link rel="stylesheet" href="css/latex.css">
 </head>
+
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="happening-now.html">Happening Now</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="experience.html">Experience</a></li>
-            </ul>
-        </nav>
-        <button id="dark-mode-toggle">Switch to Dark Mode</button>
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="./index.html#About">About</a>
+            <a href="happening-now.html">Happening Now</a>
+            <a href="blog.html">Blog</a>
+            <a href="experience.html">Experience</a>
+            <a href="./index.html#Contact">Contact</a>
+        </div>
+        <button class="dark-mode-toggle" id="dark-mode-toggle">Switch to Dark Mode</button>
     </header>
     <main>
+        
         <h1>Blog</h1>
-        <p>Check out my latest posts and updates.</p>
+        <blockquote>
+            Quite honestly, if I were doing work related to a living being or historical being where there was visual or audio recordings available, 
+            I would find that extremely difficult because I don't know how you would avoid the process of mimicry. And mimicry, to me at any rate, 
+            is a very dull prospect.
+            <center><br>- Daniel Day-Lewis</center>
+        </blockquote>
+        <h2>About</h2>
+        <p>
+            Hello! I'm a student at the <b>University of Texas at Austin</b> pursuing a double major in Computer Science and Mathematics. 
+            I'm particularly interested in machine learning, system security, and networking. See <a href="experience.html">experience</a> for more.
+        </p>
+        <p>
+            Outside of work and school, I enjoy playing saxophone, trying new foods, and spending time with family. To keep my saxophone skills, I participate 
+            in the University Saxophone Ensemble. Currently, I own a Yanagisawa TW02 and play on the included mouthpiece and blue box Vandoren 3.5 reeds. I'm also
+            certified in amateur radio with a Technician Class license and am a part of the N5XU, the UT Austin Amateur Radio Club.
+        </p>
+        <p>
+            If you want to know what I'm doing currently, see <a href="happening-now.html">happening now</a> for a quick view into my current routine or check 
+            out my <a href="blog.html">blog</a> for details on some of my projects.
+        </p>
+        <h2>Contact</h2>
+        <p>
+            <a href="mailto:akshay.g.application@gmail.com">Email</a> is usually the best way to reach me, but I also have a 
+            <a href="https://www.linkedin.com/in/akshay-g-2a6108213/">LinkedIn</a>.
+        </p>
     </main>
     <footer>
-        <p>&copy; 2024 My Personal Website</p>
+        <p>&copy; 2024 Akshay Gaitonde</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="./scripts/darkmode.js"></script>
 </body>
 </html>
